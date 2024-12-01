@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  background-color: aquamarine;
+  padding: 10px;
+}
+.item {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
