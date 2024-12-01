@@ -40,6 +40,17 @@ function createUI() {
   document.querySelector("#left").innerHTML = html;
 }
 createUI();
+
 function valueChanged(src) {
   document.querySelector(".container").style[src.id] = src.value;
+}
+
+function showCode() {
+  let code = ".container {\n";
+  for (let attr in containerAttributes) {
+    let value = document.querySelector(`#${attr}`).value;
+    code += `    ${attr}: ${value};\n`;
+  }
+  code += "}";
+  document.querySelector("#code").innerHTML = code;
 }
